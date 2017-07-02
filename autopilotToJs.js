@@ -67,6 +67,14 @@ function act(car) {
    }
    var droveTo = drive(car, distanceBetweenCities);
    passengersDropped = dropOffPassengers(car);
-   return droveTo +" "+ passengersDropped 
+   return droveTo +" "+ passengersDropped
   }
+ }
+
+ function commandFlee(cars) {
+   for (var index = 0; index < cars.length; index++){
+     var action = act(cars[i])
+     console.log("Car " + (index + 1) + ": " + action);
+   }
+   return console.log("----")
  }
