@@ -54,3 +54,19 @@ function dropOffPassengers(car){
   car.passengers = 0
   return "Dropped off " + previousPassengers + "passengers."
 }
+
+function act(car) {
+  var distanceBetweenCities = 50
+  if (car.gas < 20) {
+    fillUpGas(car);
+  } else if (car.passengers < 3) {
+    pickUpPassenger(car)
+  } else {
+    if (car.gas < distanceBetweenCities){
+    return fillUpGas(car);
+   }
+   var droveTo = drive(car, distanceBetweenCities);
+   passengersDropped = dropOffPassengers(car);
+   return droveTo +" "+ passengersDropped 
+  }
+ }
