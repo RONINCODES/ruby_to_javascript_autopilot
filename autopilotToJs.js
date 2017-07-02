@@ -38,3 +38,13 @@ function fillUpGas(car) {
 function getGasDisplay(amountOfGas) {
   return amountOfGas
 }
+
+function drive(car, cityDistance){
+  if (car.gas < cityDistance) {
+    return fillUpGas(car);
+  }
+  car.city = getDestination(car)
+  car.gas -= cityDistance;
+  return "Drove to " + car.city + ".  Remaining gas: " + getGasDisplay(car.gas) + "."
+
+}
