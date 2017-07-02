@@ -30,7 +30,7 @@ function getDestination(car){
  }
 
 function fillUpGas(car) {
-  var oldGas = car.gas
+  var oldGas = car.gas;
   car.gas = 100
   return "Filled up to " + getGasDisplay(car.gas) + "on gas from " + getGasDisplay(oldGas + "."
 }
@@ -47,4 +47,10 @@ function drive(car, cityDistance){
   car.gas -= cityDistance;
   return "Drove to " + car.city + ".  Remaining gas: " + getGasDisplay(car.gas) + "."
 
+}
+
+function dropOffPassengers(car){
+  var previousPassengers = car.passengers;
+  car.passengers = 0
+  return "Dropped off " + previousPassengers + "passengers."
 }
