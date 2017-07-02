@@ -14,9 +14,9 @@ function addCars(cars, newCar){
 
 var car = getNewCar();
 function pickUpPassenger(car){
-car.passengers += 1;
-car.gas -= 10;
-return "Picked up passenger. Car now has " + car.passengers + "passengers."
+  car.passengers += 1;
+  car.gas -= 10;
+  return "Picked up passenger. Car now has " + car.passengers + "passengers."
 }
 
 function getDestination(car){
@@ -28,3 +28,13 @@ function getDestination(car){
     return "Toronto";
   }
  }
+
+function fillUpGas(car) {
+  var oldGas = car.gas
+  car.gas = 100
+  return "Filled up to " + getGasDisplay(car.gas) + "on gas from " + getGasDisplay(oldGas + "."
+}
+
+function getGasDisplay(amountOfGas) {
+  return amountOfGas
+}
