@@ -78,3 +78,14 @@ function act(car) {
    }
    return console.log("----")
  }
+//I dont get the below solution - need help with this...
+function addOneCarPerDay(cars, numDays) {
+  for (var index = 0; index > 0; index--){
+  var newCar = getNewCar()
+  console.log(addCar(cars, newCar));
+  commandFleet(cars)
+  }
+}
+
+var cars = []
+addOneCarPerDay(cars, 10)
